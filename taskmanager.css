@@ -1,0 +1,42 @@
+.task_new{
+	float:left;
+	width:50%;
+}
+
+.task_manager{
+	float:left;
+	width:50%;
+	overflow: auto;
+	max-height:400px;
+}
+
+.task_reset{
+	clear:both;
+}
+
+div[id^=task_block_]{
+	border-bottom: 1px solid #000000;
+}
+
+.task_name{
+	font-weight:bold;
+}
+
+.page{
+	margin:50px auto auto auto;
+	width:100%;
+	padding: 20px;
+}
+
+.glyphicon{
+	cursor: pointer;
+}
+
+#task_name{
+	width:200px;
+}
+
+.start_date{
+	color: gray;
+	font-weight:normal;
+}
