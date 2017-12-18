@@ -16,71 +16,12 @@ Task master by Adamski
 
 <script type="text/javascript">
 $(document).ready(function(){
-
-	$('#startBtn').on('click',function(){
-		task_start($('#task_name'));
-	});
-
-	$('#task_name').on('keyup',function(event){
-		if (event.keyCode == 13) {
-			task_start($('#task_name'));
-		}
-	});
-
-	$('#loadBtn').on('click',function(event){
-		load();
-	});
-
-	$('#saveBtn').on('click',function(event){
-		save();
-	});
-
-	$('#clearBtn').on('click',function(event){
-		clear();
-	});
-	
-	$('#active_block').on('click','span[id^="task_resume_"]',function(event){
-
-		var id = $(this).attr('id').replace(/[^0-9]/g,'');
-		task_resume(id);
-	});
-
-	$('#active_block').on('click','span[id^="task_stop_"]',function(event){
-
-		var id = $(this).attr('id').replace(/[^0-9]/g,'');
-		task_stop(id);
-	});
-
-	$('#active_block').on('click','span[id^="task_delete_"]',function(event){
-
-		var id = $(this).attr('id').replace(/[^0-9]/g,'');
-		task_delete(id);
-	});
+	$('#page').taskMasterWA();        
 });
 </script>
 </head>
 <body>
 
-<div class="page">
-	<div class="task_new">
-		<div class="alert alert-success">New task.</div>
-		<input type="text" id="task_name" maxlength="50" />
-		<span class="glyphicon glyphicon-plus" id="startBtn" title="Add"></span>
-		<br /><br />
-		
-		<span class="glyphicon glyphicon-floppy-open" id="loadBtn" title="Load"></span>		
-		&nbsp;&nbsp;&nbsp;
-		<span class="glyphicon glyphicon-floppy-save" id="saveBtn" title="Save"></span>
-		&nbsp;&nbsp;&nbsp;
-		<span class="glyphicon glyphicon-floppy-remove" id="clearBtn" title="Clear"></span>
-		
-		<div id="task_info"></div>
-	</div>
-	<div class="task_manager" class="label label-primary">
-		<div class="alert alert-info">Active tasks.</div>
-		<div id="active_block"></div>
-	</div>
-	<div class="task_reset"></div>
-</div>
+<div id="page"></div>
 </body>
 </html>
