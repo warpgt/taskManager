@@ -22,7 +22,7 @@ div[id^=task_block_]{
 	font-weight:bold;
 }
 
-.page{
+#page{
 	margin:50px auto auto auto;
 	width:100%;
 	padding: 20px;
